@@ -14,6 +14,7 @@
 		93586B9A1AD5075400FE95EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93586B991AD5075400FE95EF /* Images.xcassets */; };
 		93586B9D1AD5075400FE95EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93586B9B1AD5075400FE95EF /* LaunchScreen.xib */; };
 		93586BA91AD5075400FE95EF /* HW_DelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93586BA81AD5075400FE95EF /* HW_DelegateTests.m */; };
+		93586BB51AD50BCF00FE95EF /* OreoSimpleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 93586BB41AD50BCF00FE95EF /* OreoSimpleProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		93586BA21AD5075400FE95EF /* HW-DelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HW-DelegateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93586BA71AD5075400FE95EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93586BA81AD5075400FE95EF /* HW_DelegateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HW_DelegateTests.m; sourceTree = "<group>"; };
+		93586BB31AD50BCF00FE95EF /* OreoSimpleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OreoSimpleProtocol.h; sourceTree = "<group>"; };
+		93586BB41AD50BCF00FE95EF /* OreoSimpleProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OreoSimpleProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		93586B8B1AD5075300FE95EF /* HW-Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				93586BB21AD50B8600FE95EF /* Protocol */,
 				93586B901AD5075400FE95EF /* AppDelegate.h */,
 				93586B911AD5075400FE95EF /* AppDelegate.m */,
 				93586B931AD5075400FE95EF /* ViewController.h */,
@@ -117,6 +121,15 @@
 				93586BA71AD5075400FE95EF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93586BB21AD50B8600FE95EF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				93586BB31AD50BCF00FE95EF /* OreoSimpleProtocol.h */,
+				93586BB41AD50BCF00FE95EF /* OreoSimpleProtocol.m */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +176,17 @@
 		93586B811AD5075300FE95EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Oreo;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = ALPHACamp;
 				TargetAttributes = {
 					93586B881AD5075300FE95EF = {
 						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					93586BA11AD5075400FE95EF = {
 						CreatedOnToolsVersion = 6.2;
@@ -219,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93586BB51AD50BCF00FE95EF /* OreoSimpleProtocol.m in Sources */,
 				93586B951AD5075400FE95EF /* ViewController.m in Sources */,
 				93586B921AD5075400FE95EF /* AppDelegate.m in Sources */,
 				93586B8F1AD5075400FE95EF /* main.m in Sources */,
@@ -344,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HW-Delegate/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HW-Delegate/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +434,7 @@
 				93586BAE1AD5075400FE95EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93586BAF1AD5075400FE95EF /* Build configuration list for PBXNativeTarget "HW-DelegateTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +443,7 @@
 				93586BB11AD5075400FE95EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
